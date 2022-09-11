@@ -1,0 +1,102 @@
+css - boost-topicsformat-as-board-moodle-4.css
+<style>
+/* width of the area where the sections are shown*/
+body.limitedwidth #page.drawers .main-inner {
+    max-width: 95%;
+}
+
+
+/* backgroundcolor and order the sections from left to right*/
+.topics {
+    background-color: #fffffe;
+    display: -webkit-inline-box;
+}
+
+
+/* width of sections  */
+.course-content ul.topics li.section {
+    width: 320px;
+    border: solid 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/* padding at the top of every second section and background color 
+   should be the same like the other sections*/
+.course-content ul.topics li.section:nth-child(2n) {
+    background-color: #fffffe;
+    padding-top: 1rem;
+}
+
+
+/* label with border*/
+.activity.activity-wrapper.label .activity-item.activityinline {
+    border: 1px solid #dee2e6;
+    padding: 0 0;
+}
+/* header h3 in label with special layout*/
+.activity.label h3 {
+    background-color: #fdc65d;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 4px;
+}
+
+.activity.label .activity-altcontent.contentwithoutlink.d-flex {
+    border-radius: 10px;
+    padding-right: 0px;
+    background-color: #fffffd !important;
+}
+
+/* *************** */
+/*      editing    */
+/* *************** */
+/* during editing: label has more width*/
+.editing .section .activity .contentwithoutlink {
+    padding-right: 20px;
+}
+.dropdown-item.cm-edit-action > i:hover {
+    color: #c00;
+}
+
+/* *************** */
+/*   actionmenue   */
+/* *************** */
+.menu-action-text {
+    display: none;
+}
+.action-menu .dropdown-item {
+    width: 0;
+    display: contents;
+}
+.action-menu .dropdown-item:hover {
+    background-color: #d00;
+}
+
+/* display button to add activity only as + */
+.btn.btn-link.text-decoration-none.section-modchooser.section-modchooser-link.activity-add.d-flex.align-items-center{
+    border: solid 0px;
+    background-color: #fffffe;
+    width: 65px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn.btn-link.text-decoration-none.section-modchooser.section-modchooser-link.activity-add.d-flex.align-items-center .activity-add-text {
+  display: none;
+}
+.add-sections {
+    border: solid 1px;
+    padding: 6px;
+    background-color: #0f6f27;
+    color: #fff;
+    border-radius: 10px;
+}
+
+/* header of section*/
+.course-section-header.d-flex {
+    border: solid 1px #39f;
+    border-radius: 15px;
+    background-color: #b4d8fd;
+}
+
+</style>
