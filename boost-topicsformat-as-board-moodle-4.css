@@ -1,5 +1,17 @@
 css - boost-topicsformat-as-board-moodle-4.css
 <style>
+/* Use color for highlight targetposition when drag and drop an activity*/
+.dragover.drop-up {
+   border-top: solid 1px #ff0000!important;
+}
+.dragover.drop-zone {
+   border: dotted 2px #ff0000!important;
+}
+.draggable.drop-down {
+   border-bottom: solid 1px #ff0000!important;
+}
+
+
 /* width of the area where the sections are shown*/
 body.limitedwidth #page.drawers .main-inner {
     max-width: 95%;
