@@ -1,0 +1,95 @@
+(capabilitys changed so block is only visible to role trainer)
+<!-- This is a checkbox that supports the event onchange.
+      So if the checkbox changes the function switchBlurMode() is called.
+-->
+<div>
+    <input type="checkbox" id="blur" value="blurmode" onchange="switchBlurMode()"> Blur Mode
+</div>
+
+<!-- This is a div that show a text 'blur inactive' as an indicator for the actual setting. If blur is active than this text is blured an not readable. If blur is inactive the text is NOT blured and readable.
+-->
+<div id="blurme" class="alert alert-danger" role="alert">
+    blur inactive
+</div>
+
+<script>
+    /* This function switches the value of blurmode in the local storage depending on the state of the checkbox.
+Also the function changeBlurMode is called. */
+    function switchBlurMode() {
+        if (document.querySelector("#blur").checked) {
+            localStorage.setItem("blurmode", true);
+        } else {
+            localStorage.setItem("blurmode", false);
+        }
+        changeBlurMode();
+    }
+
+
+    function setBlurMode() {
+        if (localStorage.getItem("blurmode") == "true") {
+            document.querySelector("#blur").checked = true;
+        } else if (localStorage.getItem("blurmode") == "false") {
+            document.querySelector("#blur").checked = false;
+        }
+    }
+
+    window.onload = (event) => {
+        setBlurMode();
+    };
+</script>
+
+
+<script>
+    function changeBlurMode() {
+        // This is the list of selectors that should be controlled by the blurmode controller.
+        let selector = ":is(\n" +
+            "#blurme,\n" +
+            "#reportuser,\n" +
+            "#menuuser,\n" +
+            ".reportloglive,\n" +
+            "header.header .mr-2, header.header .mb-3,\n" +
+            "#page-admin-user  #page-content #users tbody,\n" +
+            "#page-admin-user  #page-content #users tbody  a[href*=\"user/view\"],\n" +
+            "#page-admin-user  #page-content #users tbody .c1,\n" +
+            "#page-admin-user  #page-content .roleholder,\n" +
+
+            "#page-course-view-participants #page-content #participants tbody a[href*=\"user/view\"],\n" +
+            "#page-course-view-participants #page-content #participants tbody .c2,\n" +
+            "#page-course-view-participants #page-content #participants tbody .c6,\n" +
+
+            "#page-grade-report-singleview-index .userinitials,\n" +
+            "#page-grade-report-singleview-index a[href*=\"user/view\"],\n" +
+            "#page-grade-report-singleview-index  .selected-option-text,\n" +
+            "#page-grade-report-singleview-index  .searchresultitemscontainer,\n" +
+
+            "#page-grade-report-overview-index .user-heading .userinitials,\n" +
+            "#page-grade-report-overview-index .user-heading a[href*=\"user/view\"],\n" +
+            "#page-grade-report-overview-index #graded_users_selector .custom-select.singleselect,\n" +
+
+            "#page-grade-report-user-index .search-widget .dropdown-menu .searchresultscontainer,\n" +
+            "#page-grade-report-user-index .user-heading .userinitials,\n" +
+            "#page-grade-report-user-index .user-heading a[href*=\"user/view\"],\n" +
+            "#page-grade-report-user-index .selected-option-text,\n" +
+            "#page-grade-report-user-index .searchresultitemscontainer,\n" +
+            "#page-grade-report-user-index .userinitials,\n" +
+
+            "tbody .userrow .username,\n" +
+            "tbody .userrow .userfield.useridnumber\n" +
+            ")";
+        let blurmode = '';
+
+        page = document.createElement('style');
+        if (localStorage.getItem("blurmode") == "true") {
+            blurmode = " {filter: blur(10px);}";
+        } else if (localStorage.getItem("blurmode") == "false") {
+            blurmode = " {filter: blur(0px);}";
+        }
+        page.innerHTML = selector + blurmode;
+        document.body.appendChild(page);
+    }
+</script>
+
+<script>
+    setBlurMode();
+    changeBlurMode();
+</script>
