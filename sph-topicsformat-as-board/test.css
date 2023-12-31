@@ -1,7 +1,8 @@
-/* Button to add an activity */
-span.activity-add-text {
-    display: none;
-}
+css
+     /* Button to add an activity */
+ span.activity-add-text {
+     display: none;
+ }
 .btn.btn-link.text-decoration-none.section-modchooser.section-modchooser-link.activity-add.d-flex.align-items-center.p-3.mb-3 {
     width: 70px;
     margin-left: auto;
@@ -22,6 +23,7 @@ span.activity-add-text {
     margin-bottom: 5px;
     background-color: #fff;
 }
+/* h5 in lablecard */
 .labelcard h5 {
     background-color: #90DAE6;
     color: #000000;
@@ -31,6 +33,7 @@ span.activity-add-text {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
+/* p in lablecard */
 .labelcard p {
     padding-left: 10px;
     padding-right: 10px;
@@ -63,14 +66,23 @@ header#page-header {
 .sectionname a {
     color: #000000;
 }
+.format-topics .course-section-header {
+    background-color: #31BFD4;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
 
 .path-course-view li.activity > div {
     padding: 0 0 0 0;
 }
 
+/* Backgroundcolor for the board */
 #region-main {
     background-color: #F5FFFA;
-    border: 0;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    overflow-x: scroll;
 }
 
 .card {
@@ -84,17 +96,7 @@ header#page-header {
     border-left-color: #F5FFFA;
 }
 
-.section h3 {
-    background-color: #31BFD4;
-    padding: 6px;
-    border: solid 0 #aaa;
-    border-radius: 8px;
-    margin-left: 10px;
-    margin-right: 10px;
-    color: #000000;
-}
-
-/* arange the li elements in ul with clas topic in columns */
+/* arange the li elements in ul with class topic in columns */
 .topics {
     display: inline-flex;
 }
@@ -148,7 +150,11 @@ header#page-header {
     padding-top: 0rem !important;
     background-color: #F5FFFA;
     border: 0 !important;
+
+    width: calc(300px);
+
 }
+
 
 
 /* Editingmode make the editing-Menu more compact and only show icons and no text */
