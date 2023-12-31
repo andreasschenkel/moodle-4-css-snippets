@@ -1,0 +1,166 @@
+/* Button to add an activity */
+span.activity-add-text {
+    display: none;
+}
+.btn.btn-link.text-decoration-none.section-modchooser.section-modchooser-link.activity-add.d-flex.align-items-center.p-3.mb-3 {
+    width: 70px;
+    margin-left: auto;
+    margin-right: auto !important;
+}
+
+/* Add a label and add a div with class labelcard */
+.labelcard {
+    border: solid 1px #777;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 0 #aaa;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #fff;
+}
+.labelcard h5 {
+    background-color: #90DAE6;
+    color: #000000;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.labelcard p {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 0px;
+}
+
+
+/* Do not show drag and drop area. */
+.dndupload-hidden {
+    display: none;
+}
+
+
+/* ToDo: Add documentation. */
+div#region-main-box {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.section_action_menu {
+    margin-right: 10px;
+}
+
+header#page-header {
+    border-bottom: solid 1px #008;
+}
+
+/* Color of sectionname */
+.sectionname a {
+    color: #000000;
+}
+
+.path-course-view li.activity > div {
+    padding: 0 0 0 0;
+}
+
+#region-main {
+    background-color: #F5FFFA;
+    border: 0;
+}
+
+.card {
+    border: 0 solid rgba(0, 0, 0, .125);
+}
+.card-body {
+    background-color: #F5FFFA;
+}
+
+#page-navbar .breadcrumb li::after {
+    border-left-color: #F5FFFA;
+}
+
+.section h3 {
+    background-color: #31BFD4;
+    padding: 6px;
+    border: solid 0 #aaa;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #000000;
+}
+
+/* arange the li elements in ul with clas topic in columns */
+.topics {
+    display: inline-flex;
+}
+
+/* Do not show section 0 */
+#section-0 {
+    display: none;
+}
+
+.section .section-modchooser-text {
+    display: none;
+}
+.section .menu-action-text {
+    display: none;
+}
+.section li.activity {
+    padding-left: 10px;
+}
+
+#page-content .section .d-inline-block.dropdown-toggle.icon-no-margin {
+    visibility: hidden;
+    font-size: 2px;
+}
+
+#page-content .section .d-inline-block.dropdown-toggle.icon-no-margin:after {
+    font-size: 30px;
+    visibility: visible;
+}
+
+.section .dropdown-item {
+    display: contents !important;
+}
+.section .label .contentwithoutlink, .section .label .activityinstance {
+    padding-right: 0;
+}
+.section .label .mod-indent-outer {
+    padding-left: 0;
+}
+.section .activity.modtype_label.label {
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+.course-content li.section ul {
+    margin: 2px;
+    padding-left: 0;
+    overflow-y: auto;
+    max-height: 90vh
+}
+.course-content ul.topics li.section {
+    padding-top: 0rem !important;
+    background-color: #F5FFFA;
+    border: 0 !important;
+}
+
+
+/* Editingmode make the editing-Menu more compact and only show icons and no text */
+.editing .section .activity .mod-indent-outer {
+    padding-left: 0;
+}
+.editing_move .icon,
+.inplaceeditable .quickeditlink .icon,
+.section-handle .icon {
+    color: #ddd !important;
+}
+.editing .section .activity .contentwithoutlink,
+.editing .section .activity .activityinstance {
+    padding-right: 0;
+}
